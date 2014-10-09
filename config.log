@@ -547,7 +547,7 @@ configure:15395: $? = 0
 configure:15395: result: yes
 configure:15401: checking for _doprnt
 configure:15401: gcc -o conftest -g -O2   conftest.c -lsfml-graphics -lsfml-window -lsfml-system  >&5
-/tmp/ccAhJANi.o: In function `main':
+/tmp/ccGz0ntP.o: In function `main':
 /home/chrissofer/Dropbox/coding/game-sfml/conftest.c:70: undefined reference to `_doprnt'
 collect2: error: ld returned 1 exit status
 configure:15401: $? = 1
@@ -635,7 +635,7 @@ configure:15415: gcc -o conftest -g -O2   conftest.c -lsfml-graphics -lsfml-wind
 conftest.c:60:6: warning: conflicting types for built-in function 'floor' [enabled by default]
  char floor ();
       ^
-/usr/lib/gcc/i486-slackware-linux/4.8.2/../../../../i486-slackware-linux/bin/ld: /tmp/ccMvo79j.o: undefined reference to symbol 'floor@@GLIBC_2.0'
+/usr/lib/gcc/i486-slackware-linux/4.8.2/../../../../i486-slackware-linux/bin/ld: /tmp/ccmcrInb.o: undefined reference to symbol 'floor@@GLIBC_2.0'
 /usr/lib/gcc/i486-slackware-linux/4.8.2/../../../../i486-slackware-linux/bin/ld: note: 'floor@@GLIBC_2.0' is defined in DSO /lib/libm.so.6 so try adding it to the linker command line
 /lib/libm.so.6: could not read symbols: Invalid operation
 collect2: error: ld returned 1 exit status
