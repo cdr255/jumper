@@ -11,7 +11,7 @@ int main()
     }
   sf::Sprite player;
   player.setTexture(ted_front);
-  
+  player.setScale(2.0f,2.0f);
 
   while (window.isOpen())
     {
