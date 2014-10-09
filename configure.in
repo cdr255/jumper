@@ -1,0 +1,39 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.69])
+AC_INIT([jumper], [0.1], [cdr255@gmail.com])
+AC_CONFIG_SRCDIR([main.cpp])
+AM_INIT_AUTOMAKE([1.11])
+LT_INIT
+AC_CONFIG_MACRO_DIR([m4])
+
+# Checks for programs.
+AC_PROG_CXX
+AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+AC_PROG_LIBTOOL
+
+# Checks for libraries.
+
+AC_CHECK_LIB([sfml-system], [main], ,
+AC_MSG_ERROR([ *** Unable to find SFML library (http://www.sfml-dev.org/)]))
+AC_CHECK_LIB([sfml-window], [main], ,
+AC_MSG_ERROR([ *** Unable to find SFML Window library (http://www.sfml-dev.org/)]))
+AC_CHECK_LIB([sfml-graphics], [main], ,
+AC_MSG_ERROR([ *** Unable to find SFML Graphics library (http://www.sfml-dev.org/)]))
+
+# Checks for header files.
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+
+AC_FUNC_ERROR_AT_LINE
+AC_FUNC_MALLOC
+AC_FUNC_REALLOC
+AC_FUNC_SELECT_ARGTYPES
+AC_FUNC_VPRINTF
+AC_CHECK_FUNCS([atexit floor getcwd gethostbyname memset mkdir select socket])
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT

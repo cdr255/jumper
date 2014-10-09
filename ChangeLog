@@ -1,0 +1,7 @@
+2014-10-09  Christopher Rodriguez <cdr255@gmail.com>
+
+	* main.cpp: Copied over example from SFML Tutorials, to use as a base.
+	* jumper.hpp: Main Header File created, to keep main.cpp clean.
+
+	* autotools: Generated standard autotools files to build project
+	successfully.
