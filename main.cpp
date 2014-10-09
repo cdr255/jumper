@@ -3,15 +3,17 @@
 int main()
 {
   sf::RenderWindow window(sf::VideoMode(640, 480), "SFML works!");
-  sf::Texture ted_front;
-  if(!ted_front.loadFromFile("Ted.png"))
-    {
-      //error
-      return 101;
-    }
-  sf::Sprite player;
-  player.setTexture(ted_front);
-  player.setScale(2.0f,2.0f);
+
+  GameObject player(0, 0, 32, 32, "Ted.png", 2);
+  //sf::Texture ted_front;
+  // if(!ted_front.loadFromFile("Ted.png"))
+  //   {
+  //     //error
+  //     return 101;
+  //   }
+  // sf::Sprite player;
+  // player.setTexture(ted_front);
+  // player.setScale(2.0f,2.0f);
 
   while (window.isOpen())
     {
@@ -23,7 +25,7 @@ int main()
         }
 
       window.clear();
-      window.draw(player);
+      window.draw(player.sprite);
       window.display();
     }
 
