@@ -2,18 +2,9 @@
 
 int main()
 {
-  sf::RenderWindow window(sf::VideoMode(640, 480), "SFML works!");
+  sf::RenderWindow window(sf::VideoMode(640, 480), "Jumper");
 
   GameObject player(0, 0, 32, 32, "Ted.png", 2);
-  //sf::Texture ted_front;
-  // if(!ted_front.loadFromFile("Ted.png"))
-  //   {
-  //     //error
-  //     return 101;
-  //   }
-  // sf::Sprite player;
-  // player.setTexture(ted_front);
-  // player.setScale(2.0f,2.0f);
 
   while (window.isOpen())
     {
@@ -22,6 +13,13 @@ int main()
         {
 	  if (event.type == sf::Event::Closed)
 	    window.close();
+
+	  if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	    player.move(4);
+	  else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	    player.move(6);
+	  else
+	    player.move(5);
         }
 
       window.clear();
