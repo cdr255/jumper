@@ -14,14 +14,15 @@ int main()
 	  if (event.type == sf::Event::Closed)
 	    window.close();
 
-	  if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-	    player.move(4);
-	  else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-	    player.move(6);
-	  else
-	    player.move(5);
         }
 
+      if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	player.move(4);
+      else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	player.move(6);
+      else
+	player.move(5);
+      
       window.clear();
       window.draw(player.sprite);
       window.display();
